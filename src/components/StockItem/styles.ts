@@ -3,10 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.li`
   width: 100%;
   max-width: 608px;
-
-  & + li {
-    margin-top: 0.5rem;
-  }
 `;
 
 export const Content = styled.div`
@@ -21,7 +17,7 @@ export const Content = styled.div`
 
   padding: 2rem 1.5rem;
 
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 
   user-select: none;
@@ -37,6 +33,7 @@ export const Content = styled.div`
   }
 
   &:hover {
-    filter: brightness(0.9);
+    filter: brightness(0.8);
+    transform: translateY(-0.4rem);
   }
 `;
