@@ -1,11 +1,17 @@
 import { StockList } from '../StockList';
 
+import { IStock } from '../StockModal';
+
 import { Container } from './styles';
 
-export function Dashboard() {
+interface DashboardProps {
+  handleOpenStockModal: (data: IStock) => void
+}
+
+export function Dashboard({handleOpenStockModal}: DashboardProps) {
   return (
     <Container>
-      <StockList />
+      <StockList handleOpenStockModal={handleOpenStockModal}/>
     </Container>
-  )
+  );
 }
