@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { IStock } from '../StockModal';
 import { StockItem } from '../StockItem';
 
-import { Container, StockList } from './styles';
+import { Container, TabNav, TabButton, StockList } from './styles';
 
 interface DashboardProps {
   handleOpenStockModal: (data: IStock) => void
@@ -34,9 +35,28 @@ const stocks = [
   }
 ]
 
-export function Dashboard({handleOpenStockModal}: DashboardProps) {
+export function Dashboard({ handleOpenStockModal }: DashboardProps) {
+  const [selectedTab, setSelectedTab] = useState('all stocks')
+
   return (
     <Container>
+      <TabNav>
+        <TabButton
+          type="button"
+          onClick={() => { setSelectedTab('all stocks') }}
+          isActive={selectedTab === 'all stocks'}
+        >
+          <span>All Stocks</span>
+        </TabButton>
+        <TabButton
+          type="button"
+          onClick={() => { setSelectedTab('subscribed') }}
+          isActive={selectedTab === 'subscribed'}
+        >
+          <span>Subscribed Stocks</span>
+        </TabButton>
+      </TabNav>
+
       <StockList>
         {stocks.map(stock => {
           return <StockItem
@@ -45,7 +65,7 @@ export function Dashboard({handleOpenStockModal}: DashboardProps) {
             handleOpenStockModal={handleOpenStockModal}
           />
         })}
-    </StockList>
+      </StockList>
     </Container>
   );
 }
