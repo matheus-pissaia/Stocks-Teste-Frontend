@@ -10,3 +10,12 @@ export const Container = styled.main`
 
   box-shadow: 0px 10px 60px rgba(113, 41, 204, 0.4);
 `;
+
+export const StockList = styled.ul`
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
