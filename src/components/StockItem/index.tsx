@@ -1,4 +1,4 @@
-import { IStock } from '../StockModal';
+import { IStock } from '../../types';
 
 import { Container, Content } from './styles';
 import { randomImg } from '../../utils/randomImg';

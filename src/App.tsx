@@ -5,9 +5,9 @@ import { StockModal } from './components/StockModal';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 
-import { IStock } from './components/StockModal'
-
 import { GlobalStyle } from './styles/global';
+
+import { IStock } from './types';
 
 Modal.setAppElement('#root');
 

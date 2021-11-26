@@ -5,12 +5,7 @@ import { Container, StockInfo } from './styles';
 import closeImg from '../../assets/close.svg';
 import graphImg from '../../assets/graph.svg';
 
-export interface IStock {
-  symbol: string;
-  companyName: string;
-  catchPhrase: string;
-  price: number;
-}
+import { IStock } from '../../types';
 
 interface StockModalProps {
   isOpen: boolean;

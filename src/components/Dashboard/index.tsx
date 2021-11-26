@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { IStock } from '../StockModal';
+import { IStock } from '../../types';
 import { TabNav } from '../TabNav';
 import { StockItem } from '../StockItem';
 
