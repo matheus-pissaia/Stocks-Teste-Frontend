@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Nav, TabButton } from './styles';
 
 export function TabNav() {
-  const [selectedTab, setSelectedTab] = useState('all stocks')
+  const [selectedTab, setSelectedTab] = useState('all stocks');
 
   return (
     <Nav>
@@ -22,5 +22,5 @@ export function TabNav() {
         <span>Subscribed Stocks</span>
       </TabButton>
     </Nav>
-  )
+  );
 }
