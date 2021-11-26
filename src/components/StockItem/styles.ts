@@ -15,7 +15,7 @@ export const Content = styled.div`
   background: var(--gray-900);
   color: var(--gray-100);
 
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 
   transition: all 0.3s ease;
   cursor: pointer;

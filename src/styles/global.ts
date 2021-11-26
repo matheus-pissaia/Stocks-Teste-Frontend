@@ -62,18 +62,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .react-modal-container {
-    background: var(--gray-900);
-
+    user-select: none;
     position: relative;
-
+    
     width: 100%;
     max-width: 800px;
     
     margin: 0 2rem;
-    padding: 8rem 4rem;
+    padding: 4rem 4rem;
     border-radius: 1rem;
     border: 1px solid var(--purple);
     
+    background: var(--gray-900);
     box-shadow: 0px 0px 60px 5px rgba(113, 41, 204, 0.4);
 
     &:focus {

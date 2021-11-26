@@ -2,7 +2,14 @@ import { useState } from 'react';
 import { IStock } from '../StockModal';
 import { StockItem } from '../StockItem';
 
-import { Container, TabNav, TabButton, StockList } from './styles';
+import {
+  Container,
+  TabNav,
+  TabButton,
+  StockList,
+  LabelLine,
+  Content
+} from './styles';
 
 interface DashboardProps {
   handleOpenStockModal: (data: IStock) => void
@@ -36,36 +43,43 @@ const stocks = [
 ]
 
 export function Dashboard({ handleOpenStockModal }: DashboardProps) {
-  const [selectedTab, setSelectedTab] = useState('all stocks')
+  const [selectedTab, setSelectedTab] = useState('all stocks');
 
   return (
     <Container>
-      <TabNav>
-        <TabButton
-          type="button"
-          onClick={() => { setSelectedTab('all stocks') }}
-          isActive={selectedTab === 'all stocks'}
-        >
-          <span>All Stocks</span>
-        </TabButton>
-        <TabButton
-          type="button"
-          onClick={() => { setSelectedTab('subscribed') }}
-          isActive={selectedTab === 'subscribed'}
-        >
-          <span>Subscribed Stocks</span>
-        </TabButton>
-      </TabNav>
+      <Content>
+        <TabNav>
+          <TabButton
+            type="button"
+            onClick={() => { setSelectedTab('all stocks') }}
+            isActive={selectedTab === 'all stocks'}
+          >
+            <span>All Stocks</span>
+          </TabButton>
+          <TabButton
+            type="button"
+            onClick={() => { setSelectedTab('subscribed') }}
+            isActive={selectedTab === 'subscribed'}
+          >
+            <span>Subscribed Stocks</span>
+          </TabButton>
+        </TabNav>
 
-      <StockList>
-        {stocks.map(stock => {
-          return <StockItem
-            key={stock.symbol}
-            stockItem={stock}
-            handleOpenStockModal={handleOpenStockModal}
-          />
-        })}
-      </StockList>
+        <LabelLine>
+          <span>Symbol</span>
+          <span>Price</span>
+        </LabelLine>
+
+        <StockList>
+          {stocks.map(stock => {
+            return <StockItem
+              key={stock.symbol}
+              stockItem={stock}
+              handleOpenStockModal={handleOpenStockModal}
+            />
+          })}
+        </StockList>
+      </Content>
     </Container>
   );
 }

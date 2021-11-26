@@ -13,13 +13,17 @@ export const Container = styled.main`
   box-shadow: 0px 10px 60px rgba(113, 41, 204, 0.4);
 `;
 
+export const Content = styled.div`
+  max-width: 608px;
+  margin: 0 auto;
+`;
+
 export const TabNav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  max-width: 608px;
-  margin: 0 auto;
+  width: 100%;
 
   padding: 3rem;
 `;
@@ -50,6 +54,29 @@ export const TabButton = styled.button<TabButtonProps>`
       ? '600'
       : '400'
     };
+  }
+
+  &:hover {
+    border-bottom: ${(props) => props.isActive
+      ? ''
+      : '1px solid var(--gray-500)'
+    };
+  }
+`;
+
+export const LabelLine = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 424px;
+
+  margin: 1.5rem 1.5rem 0.6rem auto;
+
+  span {
+    color: var(--gray-500);
+    font-size: 0.7rem;
   }
 `;
 

@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { Container, StockInfo } from './styles';
 
 import closeImg from '../../assets/close.svg';
+import graphImg from '../../assets/graph.svg';
 
 export interface IStock {
   symbol: string;
@@ -45,6 +46,8 @@ export function StockModal({isOpen, onRequestClose, stock}: StockModalProps) {
         </StockInfo>
 
         <div></div>
+
+        <img src={graphImg} alt="graph" />
       </Container>
     </Modal>
   );
