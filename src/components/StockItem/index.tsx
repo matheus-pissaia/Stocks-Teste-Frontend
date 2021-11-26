@@ -1,7 +1,19 @@
 import { IStock } from '../StockModal';
-import { Container, Content } from './styles';
 
-import up1 from '../../assets/up1.svg'
+import { Container, Content } from './styles';
+import { randomImg } from '../../utils/randomImg';
+
+import up1 from '../../assets/up1.svg';
+import up2 from '../../assets/up2.svg';
+import down1 from '../../assets/down1.svg';
+import down2 from '../../assets/down2.svg';
+
+const images = [
+  up1,
+  up2,
+  down1,
+  down2
+]
 
 interface StockItemProps {
   stockItem: IStock
@@ -17,7 +29,7 @@ export function StockItem({ stockItem, handleOpenStockModal }: StockItemProps) {
     <Container>
       <Content onClick={setSelectedStock}>
         <div>
-          <img src={up1} alt="up1" />
+          <img src={randomImg(images)} alt="" />
           <strong>{stockItem.symbol}</strong>
         </div>
         <p>{stockItem.price}</p>

@@ -1,11 +1,11 @@
 import { useState } from 'react';
+
 import { IStock } from '../StockModal';
+import { TabNav } from '../TabNav';
 import { StockItem } from '../StockItem';
 
 import {
   Container,
-  TabNav,
-  TabButton,
   StockList,
   LabelLine,
   Content
@@ -43,27 +43,12 @@ const stocks = [
 ]
 
 export function Dashboard({ handleOpenStockModal }: DashboardProps) {
-  const [selectedTab, setSelectedTab] = useState('all stocks');
+  const [] = useState();
 
   return (
     <Container>
       <Content>
-        <TabNav>
-          <TabButton
-            type="button"
-            onClick={() => { setSelectedTab('all stocks') }}
-            isActive={selectedTab === 'all stocks'}
-          >
-            <span>All Stocks</span>
-          </TabButton>
-          <TabButton
-            type="button"
-            onClick={() => { setSelectedTab('subscribed') }}
-            isActive={selectedTab === 'subscribed'}
-          >
-            <span>Subscribed Stocks</span>
-          </TabButton>
-        </TabNav>
+        <TabNav />
 
         <LabelLine>
           <span>Symbol</span>
