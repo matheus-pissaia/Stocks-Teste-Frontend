@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 
+import { StocksProvider } from './hooks/useStocks';
 import { StockModal } from './components/StockModal';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
@@ -25,7 +26,7 @@ function App() {
   }
 
   return (
-    <>
+    <StocksProvider>
       <Header />
       <Dashboard handleOpenStockModal={handleOpenStockModal}/>
 
@@ -35,7 +36,7 @@ function App() {
         stock={selectedStock}
       />
       <GlobalStyle />
-    </>
+    </StocksProvider>
   );
 }
 

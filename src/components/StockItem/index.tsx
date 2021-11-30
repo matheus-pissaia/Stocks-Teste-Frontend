@@ -32,7 +32,7 @@ export function StockItem({ stockItem, handleOpenStockModal }: StockItemProps) {
           <img src={randomImg(images)} alt="" />
           <strong>{stockItem.symbol}</strong>
         </div>
-        <p>{stockItem.price}</p>
+        <p>{stockItem.basePrice}</p>
       </Content>
     </Container>
   )

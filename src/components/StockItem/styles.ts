@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.li`
   width: 100%;
-  max-width: 608px;
+  max-width: 508px;
 `;
 
 export const Content = styled.div`

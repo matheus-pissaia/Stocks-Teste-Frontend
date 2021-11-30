@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   max-width: 960px;
-  margin: 0 auto;
-  margin-top: -3rem;
+  margin: -3rem auto 3rem;
 
   padding: 0 0 3rem 0;
 
@@ -14,7 +13,7 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.div`
-  max-width: 608px;
+  max-width: 508px;
   margin: 0 auto;
 `;
 
@@ -24,7 +23,7 @@ export const LabelLine = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 424px;
+  max-width: 324px;
 
   margin: 1.5rem 1.5rem 0.6rem auto;
 

@@ -19,7 +19,7 @@ export function TabNav() {
         onClick={() => { setSelectedTab('subscribed') }}
         isActive={selectedTab === 'subscribed'}
       >
-        <span>Subscribed Stocks</span>
+        <span>Subscribed</span>
       </TabButton>
     </Nav>
   );

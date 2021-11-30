@@ -37,7 +37,7 @@ export function StockModal({isOpen, onRequestClose, stock}: StockModalProps) {
             <span>"{stock.catchPhrase}"</span>
           </div>
           
-          <strong>{stock.price}</strong>
+          <strong>{stock.basePrice}</strong>
         </StockInfo>
 
         <div></div>
