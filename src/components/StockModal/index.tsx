@@ -1,11 +1,12 @@
 import Modal from 'react-modal';
 
-import { Container, StockInfo } from './styles';
+import { Container, StockInfo, SubscribeButton } from './styles';
 
 import closeImg from '../../assets/close.svg';
 import graphImg from '../../assets/graph.svg';
 
 import { IStock } from '../../types';
+import { useStocks } from '../../hooks/useStocks';
 
 interface StockModalProps {
   isOpen: boolean;
@@ -13,7 +14,9 @@ interface StockModalProps {
   stock: IStock;
 }
 
-export function StockModal({isOpen, onRequestClose, stock}: StockModalProps) {
+export function StockModal({ isOpen, onRequestClose, stock }: StockModalProps) {
+  const { handleSubscribeStock } = useStocks();
+
   return (
     <Modal
       isOpen={isOpen}
@@ -43,6 +46,12 @@ export function StockModal({isOpen, onRequestClose, stock}: StockModalProps) {
         <div></div>
 
         <img src={graphImg} alt="graph" />
+
+        <SubscribeButton
+          onClick={() => handleSubscribeStock(stock.symbol)}
+        >
+          <strong>Subscribe</strong>
+        </SubscribeButton>
       </Container>
     </Modal>
   );

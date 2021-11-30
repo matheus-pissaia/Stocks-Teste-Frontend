@@ -2,6 +2,7 @@ import { IStock } from '../../types';
 
 import { Container, Content } from './styles';
 import { randomImg } from '../../utils/randomImg';
+import { formatPrice } from '../../utils/format';
 
 import up1 from '../../assets/up1.svg';
 import up2 from '../../assets/up2.svg';
@@ -32,7 +33,7 @@ export function StockItem({ stockItem, handleOpenStockModal }: StockItemProps) {
           <img src={randomImg(images)} alt="" />
           <strong>{stockItem.symbol}</strong>
         </div>
-        <p>{stockItem.basePrice}</p>
+        <p>{formatPrice(stockItem.basePrice)}</p>
       </Content>
     </Container>
   )

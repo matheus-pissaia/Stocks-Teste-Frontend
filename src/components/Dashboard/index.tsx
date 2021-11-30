@@ -16,7 +16,7 @@ interface DashboardProps {
 }
 
 export function Dashboard({ handleOpenStockModal }: DashboardProps) {
-  const { stocks } = useStocks();
+  const { allStocks } = useStocks();
 
   return (
     <Container>
@@ -29,7 +29,7 @@ export function Dashboard({ handleOpenStockModal }: DashboardProps) {
         </LabelLine>
 
         <StockList>
-          {stocks.map(stock => {
+          {allStocks && allStocks.map(stock => {
             return <StockItem
               key={stock.symbol}
               stockItem={stock}

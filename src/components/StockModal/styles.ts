@@ -35,3 +35,27 @@ export const StockInfo = styled.div`
     font-style: italic;
   }
 `;
+
+export const SubscribeButton = styled.button`
+  background: var(--purple);
+  border: 0;
+  border-radius: 0.5rem;
+
+  color: var(--gray-100);
+  
+  width: 100%;
+  padding: 1rem;
+
+  margin-top: 3rem;
+
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+
+  strong {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+`;
