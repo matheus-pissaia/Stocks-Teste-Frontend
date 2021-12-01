@@ -1,12 +1,14 @@
 import Modal from 'react-modal';
 
+import { useStocks } from '../../hooks/useStocks';
+import { formatPrice } from '../../utils/format';
+
+import { IStock } from '../../types';
+
 import { Container, StockInfo, SubscribeButton } from './styles';
 
 import closeImg from '../../assets/close.svg';
 import graphImg from '../../assets/graph.svg';
-
-import { IStock } from '../../types';
-import { useStocks } from '../../hooks/useStocks';
 
 interface StockModalProps {
   isOpen: boolean;
@@ -40,7 +42,7 @@ export function StockModal({ isOpen, onRequestClose, stock }: StockModalProps) {
             <span>"{stock.catchPhrase}"</span>
           </div>
           
-          <strong>{stock.basePrice}</strong>
+          <strong>{formatPrice(stock.basePrice)}</strong>
         </StockInfo>
 
         <div></div>
