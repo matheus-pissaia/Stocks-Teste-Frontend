@@ -1,6 +1,7 @@
 # 📈 Stocks React App
 
-This project is a WEB App to track stocks and their prices.
+This project is a WEB App to track stocks and their prices. \
+**`Note: All the stocks data in this project are FAKE!`**
 
 <img src="screenshots/stocks.gif">
 
